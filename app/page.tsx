@@ -25,7 +25,7 @@ const values = [
 const projects = [
   {
     category: "AI / NLP",
-    year: "2024",
+    year: "2025",
     title: "Sign Language Translation",
     description:
       "A multimodal deep learning system for gloss-free British Sign Language translation using PyTorch, NLP and Transformers.",
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     category: "Web app",
-    year: "2024",
+    year: "2026",
     title: "Jewel by Ayr",
     description:
       "A responsive single-page website designed for a jewellery brand, with a polished storefront feel and external shopping links.",
