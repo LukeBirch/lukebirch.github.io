@@ -349,6 +349,18 @@ a {
   padding-left: 1.1rem;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  color: var(--foreground);
+}
+
 .skill-cloud {
   display: flex;
   flex-wrap: wrap;

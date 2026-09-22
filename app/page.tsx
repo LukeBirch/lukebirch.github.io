@@ -1,67 +1,82 @@
 const stats = [
-  { value: "6+", label: "Years building" },
-  { value: "20+", label: "Projects shipped" },
-  { value: "100%", label: "Curiosity-driven" },
+  { value: "1st", label: "Class degree" },
+  { value: "4", label: "Featured projects" },
+  { value: "AI", label: "& ML focus" },
 ];
 
 const values = [
   {
     number: "01",
-    title: "Product thinking",
-    text: "I start with user needs and focus on the right problem before building the solution.",
+    title: "Deep learning",
+    text: "I build end-to-end AI systems with a focus on model design, data pipelines, and practical performance.",
   },
   {
     number: "02",
-    title: "Clean engineering",
-    text: "I value maintainable code, strong systems, and thoughtful implementation decisions.",
+    title: "Systems thinking",
+    text: "My work balances algorithmic rigor with maintainable, effective engineering choices.",
   },
   {
     number: "03",
-    title: "Thoughtful delivery",
-    text: "I collaborate closely with teams to move from idea to launch with clarity and momentum.",
+    title: "Applied research",
+    text: "I enjoy turning complex ideas into working, testable tools and products with measurable impact.",
   },
 ];
 
 const projects = [
   {
+    category: "AI / NLP",
+    year: "2024",
+    title: "Sign Language Translation",
+    description:
+      "A multimodal deep learning system for gloss-free British Sign Language translation using PyTorch, NLP and Transformers.",
+    bullets: ["PyTorch", "Transformers", "Deep Learning", "NLP"],
+    link: "https://github.com/LukeBirch/Sign-Language-Translation-Project-Report",
+  },
+  {
     category: "Web app",
     year: "2024",
-    title: "Northstar Dashboard",
+    title: "Jewel by Ayr",
     description:
-      "A reporting platform for teams tracking key operational metrics and trends in real time.",
-    bullets: ["Built a clean analytics experience", "Improved visibility and decision speed"],
+      "A responsive single-page website designed for a jewellery brand, with a polished storefront feel and external shopping links.",
+    bullets: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    link: "https://github.com/LukeBirch/jewel-by-ayr",
   },
   {
-    category: "Product design",
+    category: "Cryptography",
+    year: "2024",
+    title: "LWE Cryptosystem & Cryptanalysis",
+    description:
+      "An implementation of an LWE-style public-key cryptosystem with experimental statistical and lattice-based attacks.",
+    bullets: ["Python", "NumPy", "Linear Algebra", "Cryptography"],
+    link: "https://github.com/LukeBirch/Crypto",
+  },
+  {
+    category: "C / Systems",
     year: "2023",
-    title: "Studio Sprint",
+    title: "Langton's Ant",
     description:
-      "A collaborative workshop tool for shaping ideas, prioritizing scope, and planning delivery.",
-    bullets: ["Designed a clearer planning workflow", "Reduced friction across team collaboration"],
-  },
-  {
-    category: "Engineering",
-    year: "2022",
-    title: "Signal Notes",
-    description:
-      "A focused note-taking experience designed to support calm, distraction-free thinking.",
-    bullets: ["Shipped a lightweight but powerful product", "Optimized for clarity and readability"],
+      "A C implementation of Langton's Ant with a terminal-based animation using ncurses to visualize emergent behaviour.",
+    bullets: ["C", "ncurses", "Linux", "Make"],
+    link: "https://github.com/LukeBirch/PP_Summative",
   },
 ];
 
 const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
   "Python",
-  "UI Design",
-  "UX Strategy",
-  "Product Thinking",
-  "API Design",
+  "C++",
+  "C#",
+  "JavaScript",
+  "SQL",
+  "PyTorch",
+  "Hugging Face",
+  "NLP",
+  "Deep Learning",
+  "Computer Vision",
+  "Reinforcement Learning",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
 ];
 
 export default function Home() {
@@ -89,19 +104,20 @@ export default function Home() {
       <section id="top" className="hero-section">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Software engineer • maker • problem solver</p>
-            <h1>Building useful things with care.</h1>
+            <p className="eyebrow">Computer science graduate • AI researcher • builder</p>
+            <h1>Luke Birch</h1>
             <p className="lead">
-              I&apos;m Luke Birch, a product-minded software engineer who enjoys turning ideas
-              into polished, dependable experiences.
+              First-Class MEng Computer Science graduate from Durham University, with a strong
+              interest in AI, machine learning, and building impactful, technically rigorous
+              systems.
             </p>
 
             <div className="hero-actions">
               <a href="#projects" className="button">
-                View work
+                View projects
               </a>
               <a href="#contact" className="button button-secondary">
-                Contact me
+                Get in touch
               </a>
             </div>
 
@@ -118,10 +134,10 @@ export default function Home() {
           <aside className="profile-card" aria-label="Profile summary">
             <div className="avatar">LB</div>
             <h2>Luke Birch</h2>
-            <p>Engineer focused on thoughtful product design and reliable software.</p>
+            <p>AI-focused computer scientist building models, systems and products with real-world impact.</p>
             <div className="card-meta">
-              <span>Based in London</span>
-              <span>Available for freelance</span>
+              <span>Durham University</span>
+              <span>MEng Computer Science</span>
             </div>
           </aside>
         </div>
@@ -130,11 +146,12 @@ export default function Home() {
       <section id="about" className="section">
         <div className="container narrow">
           <p className="section-tag">About</p>
-          <h2>Designing systems that feel simple and work beautifully.</h2>
+          <h2>First-Class MEng Computer Science graduate from Durham University.</h2>
           <p>
-            I help teams turn ideas into clear digital experiences. My work sits at the
-            intersection of engineering, design thinking, and practical delivery. I care deeply
-            about user experience, maintainable architecture, and long-term product value.
+            I am a computer science graduate with a strong foundation in software engineering,
+            deep learning, and applied problem solving. My work spans AI, NLP, computer vision,
+            cryptography, and modern web development, with a focus on building tools that are both
+            technically sound and practically useful.
           </p>
         </div>
       </section>
@@ -179,6 +196,9 @@ export default function Home() {
                     <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
+                <a href={project.link} target="_blank" rel="noreferrer" className="project-link">
+                  View Repository
+                </a>
               </article>
             ))}
           </div>
@@ -200,21 +220,26 @@ export default function Home() {
       <section id="contact" className="section contact-section">
         <div className="container contact-box">
           <div>
-            <p className="section-tag">Contact</p>
-            <h2>Let&apos;s build something meaningful.</h2>
+            <p className="section-tag">Links</p>
+            <h2>Connect with me.</h2>
           </div>
 
           <div className="contact-actions">
-            <a href="mailto:luke@example.com" className="button">
-              luke@example.com
+            <a
+              href="https://github.com/LukeBirch"
+              target="_blank"
+              rel="noreferrer"
+              className="button"
+            >
+              GitHub
             </a>
             <a
-              href="https://github.com"
+              href="https://www.linkedin.com/in/luke-birch-167a67198"
               target="_blank"
               rel="noreferrer"
               className="button button-secondary"
             >
-              GitHub
+              LinkedIn
             </a>
           </div>
         </div>
@@ -224,10 +249,10 @@ export default function Home() {
         <div className="container footer-wrap">
           <p>© {new Date().getFullYear()} Luke Birch</p>
           <div className="footer-links">
-            <a href="https://github.com" target="_blank" rel="noreferrer">
+            <a href="https://github.com/LukeBirch" target="_blank" rel="noreferrer">
               GitHub
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/luke-birch-167a67198" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
           </div>
